@@ -45,8 +45,6 @@ FROM mongo:latest
 ENV MONGO_CONTAINER_NAME="mongodb-21BCP107"
 ```
 
-![Image](/images/Screenshot 2024-04-23 110138.png)
-
 ## Step 2: building and running the database
 
 ```dockerfile
@@ -57,9 +55,8 @@ docker build -t mongodb-21BCP107 .
 docker run -d --name mongodb-21BCP107 -p 27017:27017 mongodb-21BCP107
 
 ```
-![Image](/images/Screenshot 2024-04-23 114000.png)
 
-
+![Screenshot 2024-04-23 114134](https://github.com/murlipatel1/blog-three-tier/assets/100035961/86fdefaa-08d3-47e3-9579-6d95d05c51f0)
 
 ## Step 3: Connecting MongoDB Container to Network
 ```dockerfile
@@ -70,9 +67,10 @@ docker network create my-network
 docker network connect my-network mongodb-21BCP107
 ```
 
-![Image](/images/Screenshot 2024-04-23 114134.png)
+![Screenshot 2024-04-23 114000](https://github.com/murlipatel1/blog-three-tier/assets/100035961/207e2745-b8bc-4778-a2b2-2b37bb48047e)
 
-![Image](/images/Screenshot 2024-04-23 114256.png)
+![Screenshot 2024-04-23 114256](https://github.com/murlipatel1/blog-three-tier/assets/100035961/9c249de6-1ea4-43b6-a95b-f66d4de940ee)
+
 
 
 ---
@@ -115,8 +113,6 @@ EXPOSE 5000
 CMD ["node", "server.js"]
 ```
 
-![Image](/images/Screenshot 2024-04-23 114417.png)
-
 
 ## Step 2: Building and Running Node.js Backend Container
 
@@ -127,7 +123,9 @@ docker build -t nodejs-backend-21BCP107 .
 # Run the Node.js backend container
 docker run -d --name nodejs-backend-21BCP107 -p 5000:5000 --network my-network nodejs-backend-21BCP107
 ```
-![Image](/images/Screenshot 2024-04-23 114557.png)
+![Screenshot 2024-04-23 114417](https://github.com/murlipatel1/blog-three-tier/assets/100035961/2fa4e26b-cdb9-4c89-bd59-09e3d78cbc71)
+
+![Screenshot 2024-04-23 114557](https://github.com/murlipatel1/blog-three-tier/assets/100035961/3e876d05-6597-4d96-a361-60b3883c01b9)
 
 ---
 layout: part3
@@ -177,7 +175,8 @@ EXPOSE 80
 # Command to start NGINX
 CMD ["nginx", "-g", "daemon off;"]
 ```
-![Image](/images/image.png)
+![Screenshot 2024-04-23 130535](https://github.com/murlipatel1/blog-three-tier/assets/100035961/7caf5baf-50b5-49ed-8ae9-a36e253e8aa0)
+
 ## Step 2: Building and Running React Frontend Container
  ``` dockerfile
 # Build the Docker image for React frontend
@@ -186,11 +185,9 @@ docker build -t react-frontend-21BCP107 .
 # Run the React frontend container
 docker run -d --name react-frontend-21BCP107 -p 80:80 --network my-network react-frontend-21BCP107
 ```
+![Screenshot 2024-04-23 115003](https://github.com/murlipatel1/blog-three-tier/assets/100035961/713bd23e-9b1b-405b-8967-f57e6db5d115)
 
-![Image](/images/Screenshot 2024-04-23 115003.png)
-
-
-![Image](/images/Screenshot 2024-04-23 115136.png)
+ ![Screenshot 2024-04-23 115136](https://github.com/murlipatel1/blog-three-tier/assets/100035961/236ee223-bb0a-4875-8c84-ea8f6fdb6b99)
 
 
 ## Conclusion
