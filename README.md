@@ -30,6 +30,13 @@ For the backend tier, Docker containers can encapsulate the application logic, i
 
 In the frontend tier, Docker can be used to package and deploy the presentation layer components such as static web assets, JavaScript frameworks like React or Angular, and web servers like Nginx or Apache. Docker containers enable developers to build and deploy frontend applications with ease, ensuring consistency and reliability.
 
+Folder Structure of project:
+![image](https://github.com/murlipatel1/blog-three-tier/assets/100035961/a770ae0b-5c2e-4f76-92aa-c837ec16550e)
+
+
+Folder structure of jenkyll:
+![image](https://github.com/murlipatel1/blog-three-tier/assets/100035961/baeff0e6-fe2f-42f9-b7df-b421fdfbc842)
+
 
 # Part 1 - Setting Up the Database Tier with MongoDB
 
