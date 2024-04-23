@@ -23,8 +23,8 @@ email: patelmurli15@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Learn how to build a three-tier application using Docker with our step-by-step tutorial series on our GitHub Pages blog. Follow along as we set up the database, backend, and frontend tiers, complete with Dockerfiles, Docker container creation, and integration of your roll number into the frontend. Explore each part with detailed explanations, code snippets, screenshots, and a GitHub repository for reference.
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "blog-three-tier/" # the subpath of your site, e.g. /blog
+url: "https://murlipatel1.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: patelmurli15
 github_username:  murlipatel1
 
