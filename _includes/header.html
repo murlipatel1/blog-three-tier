@@ -1,9 +1,10 @@
+{% assign base_url = "/blog-three-tier/" %}
+
 <nav>
-    <ul>
-      <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
-      <li><a href="{% assign domain = site.url | append: site.baseurl %}/part1/" class="{% if page.url == '/part1/' %}active{% endif %}">Part 1</a></li>
-      <li><a href="/part2/" class="{% if page.url == '/part2/' %}active{% endif %}">Part 2</a></li>
-      <li><a href="/part3/" class="{% if page.url == '/part3/' %}active{% endif %}">Part 3</a></li>
-    </ul>
-  </nav>
-  
+  <ul>
+    <li><a href="{{ base_url }}" class="{% if page.url == base_url %}active{% endif %}">Home</a></li>
+    <li><a href="{{ base_url }}part1/" class="{% if page.url == base_url+'part1/' %}active{% endif %}">Part 1</a></li>
+    <li><a href="{{ base_url }}part2/" class="{% if page.url == base_url+'part2/' %}active{% endif %}">Part 2</a></li>
+    <li><a href="{{ base_url }}part3/" class="{% if page.url == base_url+'part3/' %}active{% endif %}">Part 3</a></li>
+  </ul>
+</nav>
